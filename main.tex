@@ -1,0 +1,118 @@
+\documentclass{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                      Información basica                        %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\titulo{Ecuaciones diferenciales}
+\def\autores{%
+  \textsuperscript{1}~Adresito Perez,
+  \textsuperscript{2}~Boby Arango,
+  \textsuperscript{3}~Carlos Lopez
+}
+\def\correos{%
+  \textsuperscript{1}~\url{andresito.perez@correounivalle.edu.co},
+  \textsuperscript{2}~\url{boby.arango@correounivalle.edu.co},
+  \textsuperscript{3}~\url{carlos.lopez@correounivalle.edu.co}
+}
+\def\institucion{Universidad del Valle}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                            Paquetes                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Idioma
+\usepackage[spanish, es-tabla]{babel}
+
+% Configuración de página
+\usepackage[letterpaper, margin = 1in]{geometry}
+
+% Colores
+\usepackage{xcolor}
+
+% Url's, links y referencias
+\usepackage[]{hyperref}
+  \hypersetup{
+      colorlinks=true,
+      linkcolor=blue,
+      filecolor=magenta,      
+      urlcolor=blue!50!black,
+      }
+  \urlstyle{same}
+
+% Referencias
+\usepackage{biblatex}
+  \addbibresource{recursos/referencias.bib}
+
+% Imagenes
+\usepackage{graphicx}
+
+% Interlineado y saltos de linea
+\usepackage{parskip}
+
+% Texto prueba
+\usepackage{lipsum}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                             Macros                             %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\keywords#1{\small\textbf{Palabras clave}: #1.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                     Comienzo del documento                     %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\twocolumn[
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                           Encabezado                           %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\hbox{
+  \vbox{\hsize=1in \centering
+    \includegraphics[width=0.8in]{recursos/RojoTransparenteUV.png}
+    \vspace{25pt}
+  }
+  \vbox{\hsize=5in \centering
+    {\huge\titulo}
+    \\ \vspace{10pt}
+    {\autores}
+    \\ \vspace{0pt}
+    {\correos}
+    \\ \vspace{10pt}
+    {\large\institucion}
+    \\ \vspace{10pt}
+    {\today}
+    \\ \vspace{0pt}
+  }
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                            Resumen                             %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{secciones/resumen}
+
+\vspace{20pt}
+
+]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                           Contenidos                           %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{secciones/introduccion}
+\input{secciones/resultados}
+\input{secciones/discusion}
+\input{secciones/conclusiones}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                          Referencias                           %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\printbibliography
+
+\end{document}
