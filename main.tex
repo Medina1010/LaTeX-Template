@@ -6,14 +6,14 @@
 
 \def\titulo{Ecuaciones diferenciales}
 \def\autores{%
-  \textsuperscript{1}~Adresito Perez,
-  \textsuperscript{2}~Boby Arango,
-  \textsuperscript{3}~Carlos Lopez
+    \textsuperscript{1}~Adresito Perez,
+    \textsuperscript{2}~Boby Arango,
+    \textsuperscript{3}~Carlos Lopez
 }
 \def\correos{%
-  \textsuperscript{1}~\url{andresito.perez@correounivalle.edu.co},
-  \textsuperscript{2}~\url{boby.arango@correounivalle.edu.co},
-  \textsuperscript{3}~\url{carlos.lopez@correounivalle.edu.co}
+    \textsuperscript{1}~\url{andresito.perez@correounivalle.edu.co},
+    \textsuperscript{2}~\url{boby.arango@correounivalle.edu.co},
+    \textsuperscript{3}~\url{carlos.lopez@correounivalle.edu.co}
 }
 \def\institucion{Universidad del Valle}
 
@@ -32,17 +32,17 @@
 
 % Url's, links y referencias
 \usepackage[]{hyperref}
-  \hypersetup{
-      colorlinks=true,
-      linkcolor=blue,
-      filecolor=magenta,      
-      urlcolor=blue!50!black,
-      }
-  \urlstyle{same}
+    \hypersetup{
+        colorlinks = blue!50!black,
+        linkcolor  = blue!50!black,
+        filecolor  = blue!50!black,
+        urlcolor   = blue!50!black,
+    }
+    \urlstyle{same}
 
 % Referencias
-\usepackage[backend=bibtex]{biblatex}
-  \addbibresource{recursos/referencias.bib}
+\usepackage[backend = bibtex]{biblatex}
+    \addbibresource{recursos/referencias.bib}
 
 % Imagenes
 \usepackage{graphicx}
@@ -55,6 +55,23 @@
 
 %Símbolos matemáticos
 \usepackage{amsmath,amssymb}
+
+% Unidades del sistema internacional
+\usepackage{siunitx}
+
+% Graficos
+\usepackage{pgfplots}
+    \pgfplotsset{compat=1.18}
+
+% Incluir datos para los graficos
+\usepackage{pgfplotstable}
+
+% Tablas
+\usepackage{array}
+
+% Espacio entre tabla y titutlo
+\usepackage{caption}
+    \captionsetup[table]{skip=2pt}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                    Macros                                    %
@@ -75,22 +92,22 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \hbox{
-  \vbox{\hsize=1in \centering
-    \includegraphics[width=0.8in]{recursos/RojoTransparenteUV.png}
-    \vspace{25pt}
-  }
-  \vbox{\hsize=5in \centering
-    {\huge\titulo}
-    \\ \vspace{10pt}
-    {\autores}
-    \\ \vspace{0pt}
-    {\correos}
-    \\ \vspace{10pt}
-    {\large\institucion}
-    \\ \vspace{10pt}
-    {\today}
-    \\ \vspace{0pt}
-  }
+    \vbox{\hsize=1in \centering
+        \includegraphics[width=0.8in]{recursos/RojoTransparenteUV.png}
+        \vspace{25pt}
+    }
+    \vbox{\hsize=5in \centering
+        {\huge\titulo}
+        \\ \vspace{10pt}
+        {\autores}
+        \\ \vspace{0pt}
+        {\correos}
+        \\ \vspace{10pt}
+        {\large\institucion}
+        \\ \vspace{10pt}
+        {\today}
+        \\ \vspace{0pt}
+    }
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
